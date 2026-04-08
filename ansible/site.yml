@@ -1,0 +1,46 @@
+- name: Deploy Mini Finance App
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Clone repo
+      git:
+        repo: https://github.com/pravinmishraaws/mini_finance.git
+        dest: /tmp/mini-finance
+        version: main        # ← specify branch explicitly
+        force: yes
+        depth: 1             # ← shallow clone, much faster
+
+    - name: Copy files to web root
+      copy:
+        src: /tmp/mini-finance/
+        dest: /var/www/html/
+        remote_src: yes
+
+    - name: Set permissions
+      file:
+        path: /var/www/html/
+        owner: www-data
+        group: www-data
+        recurse: yes
+      notify: restart nginx
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+
+
+- name: Verify Deployment
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Check website
+    uri:
+      url: "http://{{ item }}"
+      status_code: 200
+    loop: "{{ groups['web'] }}"
+    loop_control:
+      label: "{{ item }}"

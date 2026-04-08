@@ -1,0 +1,135 @@
+# Ansible
+*.retry
+.vault_pass
+.vault_pass.txt
+ansible.cfg.bak
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.stackdump
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+
+# Sensitive data
+secrets/
+inventory/group_vars/all/vault.yml
+inventory/host_vars/*/vault.yml
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Ansible Galaxy
+roles/requirements.yml.lock
+
+# Molecule (if used for testing)
+.molecule/
+# Ansible
+*.retry
+.vault_pass
+.vault_pass.txt
+ansible.cfg.bak
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.stackdump
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+
+# Sensitive data
+secrets/
+inventory/group_vars/all/vault.yml
+inventory/host_vars/*/vault.yml
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Ansible Galaxy
+roles/requirements.yml.lock
+
+# Molecule (if used for testing)
+.molecule/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+
+# SSH
+.ssh/
+id_rsa
+id_rsa.pub
