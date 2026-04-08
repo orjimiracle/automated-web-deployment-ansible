@@ -1,59 +1,135 @@
-# Dependencies
-node_modules/
-venv/
-env/
-.venv/
+# Ansible
+*.retry
+.vault_pass
+.vault_pass.txt
+ansible.cfg.bak
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Build outputs
-dist/
-build/
-*.egg-info/
-
-# IDE
-.vscode/
-.idea/
+# Temporary files
+*.tmp
 *.swp
 *.swo
 *~
 
-# OS
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+*.stackdump
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+
+# Sensitive data
+secrets/
+inventory/group_vars/all/vault.yml
+inventory/host_vars/*/vault.yml
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Ansible Galaxy
+roles/requirements.yml.lock
+
+# Molecule (if used for testing)
+.molecule/
+# Ansible
+*.retry
+.vault_pass
+.vault_pass.txt
+ansible.cfg.bak
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
 
 # Logs
 *.log
-npm-debug.log*
-
-# Testing
-.coverage
-htmlcov/
-.pytest_cache/
+logs/
 
 # Cache
-__pycache__/
 .cache/
+__pycache__/
 *.pyc
-.eslintcache
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.stackdump
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+
+# Sensitive data
+secrets/
+inventory/group_vars/all/vault.yml
+inventory/host_vars/*/vault.yml
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Ansible Galaxy
+roles/requirements.yml.lock
+
+# Molecule (if used for testing)
+.molecule/
 
 # Terraform
 .terraform/
 *.tfstate
 *.tfstate.backup
-crash.log
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-.terraform.tfstate.lock.info
-.terraform.rc
-terraform.rc
+terraform.tfvars
 
-# SSH and system config
+# SSH
 .ssh/
-etc/hosts
-etc/ssh/
+id_rsa
+id_rsa.pub

@@ -16,9 +16,16 @@ It is designed as a **beginner-friendly DevOps project** that covers:
 
 ```
 mini-finance/
-│── inventory.ini
-│── site.yml
-│── .gitignore
+├── Readme.md
+├── ansible
+│   └── site.yml
+├── inventory.ini
+└── terraform
+    ├── .terraform.lock.hcl
+    ├── main.tf
+    ├── outputs.tf
+    ├── providers.tf
+    └── variables.tf
 ```
 
 ---
